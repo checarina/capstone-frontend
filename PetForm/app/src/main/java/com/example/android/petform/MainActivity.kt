@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
         val speciesSpinner: Spinner = findViewById(R.id.species_spinner)
         val adapter = ArrayAdapter.createFromResource(this, R.array.species, support_simple_spinner_dropdown_item)
-            adapter.setDropDownViewResource(support_simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(support_simple_spinner_dropdown_item)
         speciesSpinner.adapter=adapter
     }
 }
