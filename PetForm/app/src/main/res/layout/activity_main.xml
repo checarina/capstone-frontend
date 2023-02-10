@@ -11,150 +11,99 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
         android:text="@string/title"
         android:textColor="#D500F9"
         android:textSize="28sp"
-        app:layout_constraintBottom_toTopOf="@+id/names"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="28dp" />
 
     <EditText
-        android:id="@+id/names"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="10dp"
+        android:id="@+id/nameField"
+        android:layout_width="363dp"
+        android:layout_height="61dp"
         android:ems="10"
         android:hint="Name"
-        app:layout_constraintBottom_toTopOf="@+id/male"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="88dp" />
+
 
     <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="205dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="28dp"
+        android:id="@+id/sexSelect"
+        android:layout_width="206dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="172dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/title"
-        app:layout_constraintStart_toStartOf="@+id/group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/sexLabel"
+            android:layout_width="73dp"
+            android:layout_height="56dp"
+            android:text="Sex"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="159dp" />
+
+        <RadioButton
+            android:id="@+id/maleButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="M"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/femaleButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.655"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </RadioGroup>
 
     <TextView
-        android:id="@+id/sex"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="48dp"
-        android:text="Sex"
+        android:id="@+id/speciesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Species"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/female"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/names" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="293dp" />
+
 
     <Spinner
         android:id="@+id/species_spinner"
-        android:layout_width="289dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginBottom="52dp"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
         android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/age"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="16dp"
-        android:text="Species"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/species_spinner"
-        app:layout_constraintStart_toStartOf="@+id/species_spinner"
-        app:layout_constraintTop_toBottomOf="@+id/sex" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="293dp" />
 
     <EditText
-        android:id="@+id/age"
+        android:id="@+id/ageField"
         android:layout_width="140dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginBottom="46dp"
+        android:layout_height="56dp"
         android:ems="10"
         android:hint="Age"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/submit_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/species_spinner" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="370dp" />
 
     <Button
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="181dp"
         android:text="Create"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age" />
-
-    <RadioButton
-        android:id="@+id/female"
-        android:layout_width="0dp"
-        android:layout_height="57dp"
-
-        android:layout_marginTop="135dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginBottom="136dp"
-        android:text="F"
-        app:layout_constraintBottom_toBottomOf="@+id/species_spinner"
-        app:layout_constraintEnd_toStartOf="@+id/male"
-        app:layout_constraintStart_toEndOf="@+id/sex"
-        app:layout_constraintTop_toTopOf="@+id/title" />
-
-    <RadioButton
-        android:id="@+id/male"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="511dp"
-        android:text="M"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/female"
-        app:layout_constraintTop_toBottomOf="@+id/names" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="female"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="textView4,species_spinner"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="502dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
