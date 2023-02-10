@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pet Form</string>
+    <string name="title">Create pet profile</string>
+    <string-array name="species">
+        <item>cat 🐱</item>
+        <item>dog 🐶</item>
+        <item>bird 🦜</item>
+    </string-array>
+</resources>
