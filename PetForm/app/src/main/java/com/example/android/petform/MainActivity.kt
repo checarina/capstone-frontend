@@ -1,5 +1,6 @@
 package com.example.android.petform
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
 import android.os.StrictMode.ThreadPolicy
@@ -89,6 +90,11 @@ class MainActivity : AppCompatActivity() {
 //            .build()
         client.newCall(request).execute().use { response ->
             if (!response.isSuccessful) throw IOException("Unexpected code $response")}
+val nameString = name.toString()
+
+        val submitIntent = Intent(this, FormSubmitted::class.java)
+        submitIntent.putExtra("name", nameString)
+        startActivity(submitIntent)
 
     }
 

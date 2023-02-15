@@ -6,4 +6,5 @@
         <item>dog 🐶</item>
         <item>bird 🦜</item>
     </string-array>
+    <string name = "pet_name">name</string>
 </resources>
